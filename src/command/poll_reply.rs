@@ -107,7 +107,7 @@ impl Default for PollReply {
     fn default() -> Self {
         // Per Art-Net spec, unused fields are zero
         PollReply {
-            address: Ipv4Addr::from_bits(0),
+            address: Ipv4Addr::UNSPECIFIED,
             port: 6454,
             version: [0; 2],
             port_address: [0; 2],
