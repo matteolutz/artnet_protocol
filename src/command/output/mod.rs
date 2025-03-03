@@ -68,6 +68,12 @@ impl PaddedData {
     }
 }
 
+impl From<PaddedData> for Vec<u8> {
+    fn from(value: PaddedData) -> Vec<u8> {
+        value.inner
+    }
+}
+
 impl AsRef<Vec<u8>> for PaddedData {
     fn as_ref(&self) -> &Vec<u8> {
         self.inner.as_ref()
